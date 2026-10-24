@@ -1,0 +1,21 @@
+# Fact Update Proposal — input for Tool B (02_Fact_Library_Maintenance)
+
+**From:** TEKsystems Program Manager application · 2026-10-17 · **Nothing below has been written to `master\`.**
+
+| Temp ID | Type | Related ID | Current wording | Proposed wording | Source | Icon | Target file § |
+|---|---|---|---|---|---|---|---|
+| TU-01 | ADD | PA-18 | Sohu: CMS v5, OpenAPI messaging, SEO — no publishing-workflow item | New PA-18.2: "Contributed to the design of Sohu's news publishing workflow — story flow, editorial review and scheduled publishing." | [CONF 2026-10-17] | ✅ (verb O5 until scope clarified) | 03 §3 PA-18 |
+| TU-02 | ADD | skills §11 | Tools: Jira, Confluence, MS Project | Add **Miro** (workflow mapping / collaborative whiteboard) — anchors: VV Technology (2019–20), Golden Bridge (2020–22), UOB (2022– ) | [CONF 2026-10-17] | ✅ | skills inventory §11 |
+| TU-03 | ADD | 02 §6.1 / 03 X-02 | No record of cross-region collaboration; earlier "has worked with US teams" answer (2026-10-17) | **Retract US claim:** no direct work with US-based teams at UOB. **Add:** "At UOB, works closely with teams in India, Thailand and Indonesia across time zones" (anchor: UOB, Oct 2022 – present; collaboration, not line management) | [CONF 2026-10-17] | ✅ | 02 §6.1; 03 X-02 |
+| TU-04 | CLARIFY | PA-10.3, PA-11.1, OQ-2.3, HR-3, HR-9 | 40 / 140 people ❓ direct vs total | GBD 40 and VV 140 = total headcount; direct reports at most 15–20. Safe wording "team of 40 (total headcount)" / "140 people in total" | [CONF 2026-10-16] (earlier session) | ✅ | 03 §0A, PA-10.3, PA-11.1; fact-check OQ-2.3 |
+| TU-05 | ADD | X-02 | — | Prioritisation practice: when the two platform lines conflict, agree MVP scope with requirement, project and tech leads, confirm dependencies, set a mutually accepted sequence | [CONF 2026-10-16] | ✅ | 03 X-02 |
+| TU-06 | CLARIFY | PA-08 | Ownership O1/O2 ❓; date ❓ | Personally wrote the agent (O1), Apr 2026 | [CONF 2026-10-16] | ✅ | 03 PA-08 |
+| TU-07 | CLARIFY | PA-07, C4 | Go-live ❓; approval ❓ | Live May 2026 after formal architecture/risk approval; 25 = total of both teams | [CONF 2026-10-16] | ✅ | 03 PA-07 §7, §6.2 C4 |
+| TU-08 | CLARIFY | FU-6, 02 §1 | Name: "Wilson" vs [TPL] "WILSON ZHANG" | Use "Wilson" (reconfirmed for this application) | [CONF 2026-10-17] | ✅ | 02 §1; fact-check FU-6 |
+| TU-09 | ADD | 02 §2 Baidu / Sohu / Renren | Earlier-experience entries in [TPL] used years only | Use [R22] months on resumes (May–Dec 2014; Mar 2012 – May 2014; Jul 2008 – Mar 2012) — confirm OK | [R22] 📄 | 📄 | 04 §4 / 02 §2 |
+| TU-10 | CLARIFY | 03 PA-10.3, PA-11.1 safe wording | "Built and led a {40-person} project team" / "Built VV's technology organisation{ of 140}" | Pair headcount with "Led", not "Built" (HR-9): "Led a 40-person project team (total headcount)…"; "Led VV's 140-person technology organisation (total headcount) and built its microservices platform…" | Audit 2026-10-17 | ✅ | 03 PA-10.3, PA-11.1 |
+| TU-11 | CLARIFY | 03 PA-10.2 vs §0A, CF-11 | §0A marks "200+ countries" ⚠️ while PA-10.2 safe wording uses it | Make PA-10.2 match §0A: either confirm capability wording ("supporting 200+ countries") or mark the slot ❓ | Audit 2026-10-17 | ⚠️ | 03 §0A, PA-10.2 |
+| TU-12 | CLARIFY | skills §4/§5 SQL, RHEL | Depth P, employer anchor ❓ | Add employer anchor (UOB?) | Audit 2026-10-17 | ❓ | skills inventory |
+| TU-13 | CORRECT | FU-3, CF-16, 02 §2 rows 4 & 6, 02 §6.4/6.6, project profile memory | AI Park "VP of Technical Development"; VV "Head of Technical Development" [CONF 2026-10-15] | **AI Park: "VP of Technical Department"; VV: "Head of Technical Centre"** — matches [R22]/[LIB]; supersedes the 2026-10-15 wording. (spelling "Centre" confirmed by Wilson 2026-10-17) | [CONF 2026-10-17] | ✅ | 02 §2, §6; 03 PA-11, PA-16; fact-check FU-3 / CF-16 |
+| TU-14 | CLARIFY | CF-06 | AI Park start Apr 2016 [CONF] vs May 2016 [R22] | **Apr 2016 – Sep 2017** reconfirmed | [CONF 2026-10-17] | ✅ | 02 §2; fact-check CF-06 |
+| TU-15 | CLARIFY | FU-5, CF-05, TL-1 | Hengshunyuan dates on resumes: option a/b/c open | **Option (a): Oct 2017 – Sep 2019**, overlap with VV not annotated on resumes (dormant period explained in interview) | [CONF 2026-10-17] | ✅ | 02 §2; fact-check FU-5 |
