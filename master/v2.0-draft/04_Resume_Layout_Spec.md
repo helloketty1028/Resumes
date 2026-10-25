@@ -1,6 +1,6 @@
 # 04 — Resume Layout Spec (Word)
 
-**Version:** v1.2 · 2026-10-20 · **Status:** ACTIVE — values marked 🔶 or ❓ must be confirmed on the first rendered resume
+**Version:** v1.3 · 2026-10-25 · **Status:** ACTIVE — values marked 🔶 or ❓ must be confirmed on the first rendered resume
 **Role of this file:** Page, font, spacing, heading, section-order and pagination rules for every tailored Word resume. Holds no content.
 **Base sample:** `C:\Users\surface\resumes\templates\wilson-2026_TPM_Bank_template.docx` **[TPL]** — the standard style [CONF 2026-10-16]. All 📏 values below were **measured from that file** (python-docx / XML inspection, rendered to PDF = 3 pages), not invented.
 **Your adjustments [CONF 2026-10-16]:** (1) do **not** use [TPL]'s narrow margins; (2) add page numbers.
@@ -20,7 +20,7 @@ Legend: 📏 measured from [TPL] · 🔶 proposed (needs confirmation on first r
 | Text width | 18.0 cm (= 10 206 twips) with the standard margins ([TPL]: 18.92 cm / 10 726 twips) | derived |
 | Header | None | 📏 |
 | **Footer — page number** | Page number in the footer | [CONF]; format ❓ (e.g. "Page X of Y", right-aligned, 8–9 pt grey — choose on first render, OQ-L1) |
-| Manual page breaks | None — pagination by keep-with-next only | 📏 (0 page breaks, 11 keepNext) |
+| Page breaks | No manual page-break characters. **One forced break:** `pageBreakBefore` on the PROFESSIONAL EXPERIENCE heading, so page 1 is the summary zone and Experience always starts on page 2. Keep this single break. | 📏 (0 `w:br type=page`; 1 `pageBreakBefore`, on P031) — corrected in v1.3 |
 
 > ⚠️ **Page-count risk:** [TPL] fills exactly 3 pages at 18.92 cm text width. The standard margins cut the line width by ~5%, so the same content may spill onto page 4. Compress content per 05 §6, not by shrinking fonts or margins.
 
@@ -35,8 +35,8 @@ Legend: 📏 measured from [TPL] · 🔶 proposed (needs confirmation on first r
 | East-Asian font | Theme minorEastAsia (no Chinese text expected) | 📏 |
 | Language tag | en-SG | 📏 |
 | Primary accent | Navy `1F3864` — name, headline, section headings, sub-headings, heading rules | 📏 |
-| Employer accent | Teal-blue `156082` — employer lines | 📏 |
-| Title line text | Dark grey `404040` | 📏 |
+| Employer accent | Teal-blue `156082` — employer lines. In [TPL] the colour is linked to the theme (`themeColor=accent1`, 13 runs), so it changes silently under another Office theme → **hard-code `156082`** and drop the theme link. | 📏 — corrected in v1.3 |
+| Title line text | Dark grey `404040` (UOB, Golden Bridge); automatic (VV Technology, AI Park) | 📏 ⚠️ inconsistent in [TPL] |
 | Scope paragraph text | `303030` | 📏 |
 | Body text | Black `000000` / automatic | 📏 |
 | Table borders / shading | Border `BFBFBF` 0.25 pt; label-cell shading `EEF2F8` | 📏 |
@@ -56,13 +56,14 @@ Legend: 📏 measured from [TPL] · 🔶 proposed (needs confirmation on first r
 | Core Competencies | 2-column table: label cell 9 pt **bold** on `EEF2F8`, content cell 9 pt; column widths 2 500 / 8 226 twips (≈23% / 77%) → rescale to 18.0 cm text width | — | — | — | 📏 |
 | Achievement bullet | "**Label:** sentence" — bold label run + normal run | Left | 0 / 1.1 pt | ~1.03 | 📏 |
 | Employer line | 11 pt bold `156082`: "Employer  \|  Location" + right-aligned tab → dates | Left, right tab at text width (10 726 twips in [TPL] → 10 206 at standard margins) | 5 / 0.25 pt | 1.5 | 📏 |
-| Title line | 9.5 pt `404040` | Left | 0 / 1.25 pt | ~1.03 | 📏 |
+| Title line | 9.5 pt *italic*, `404040` (see §2) | Left | 0 / 1.25 pt | ~1.03 | 📏 — italic corrected in v1.3 |
 | Scope / context paragraph | 9.5 pt `303030` (UOB) or black | Left | 0 / 1.25 pt | ~1.03 | 📏 |
-| Sub-heading inside a role | 9.5 pt bold `1F3864` (e.g. "Production & Service Management") | Left | 2.25 / 0.75 pt | ~1.03 | 📏 |
+| Sub-heading inside a role | 9.5 pt ***bold italic*** `1F3864` (e.g. "Production & Service Management") | Left | 2.25 / 0.75 pt | ~1.03 | 📏 — italic corrected in v1.3 |
 | Experience bullet | 9.5 pt; "•" bullet; indent left 280 twips, hanging 200 twips | Left | 0 / 1.1 pt | ~1.03 | 📏 |
 | Earlier-experience heading | Styled as an employer line (11 pt `156082`) instead of a section heading | — | — | — | ⚠️ inconsistent in [TPL] — OQ-L3 |
 
-Keep-with-next on: section headings, employer lines, title lines and sub-headings 📏 — so a heading never sits alone at the foot of a page.
+Keep-with-next in [TPL] 📏: 11 paragraphs — the section headings, the employer lines and one empty spacer paragraph (P022). Title lines and sub-headings have **none** (corrected in v1.3).
+**Standard 🔶:** add keep-with-next to title lines and sub-headings as well, so a heading never sits alone at the foot of a page.
 
 ### 3A. Readability limits (checked on the rendered PDF) 🔶 [CONF 2026-10-20]
 
@@ -129,3 +130,4 @@ EDUCATION, CERTIFICATIONS & LANGUAGES
 | v1.0 | 2026-10-16 | Created from measurements of [TPL]; margins replaced by [LIB] values and page number added per your decision; three internal inconsistencies of [TPL] flagged. |
 | v1.1 | 2026-10-17 | §5 name rule updated: "WILSON" (FU-6 closed, D-11). |
 | v1.2 | 2026-10-20 | New §3A Readability limits (🔶, to be confirmed on the next renders) and a rendered-PDF check line in §6. Nothing removed. |
+| v1.3 | 2026-10-25 | Merged the 4 corrections from `reference\Resume_Layout_Spec_v2.0.md`, each re-verified against the [TPL] XML on 2026-10-25: §1 forced break before Experience (`pageBreakBefore`); §3 title lines italic, sub-headings bold italic; §3 keep-with-next as measured (headings + employer lines only) with title lines / sub-headings marked as the 🔶 standard; §2 teal is theme-linked (`accent1`) → hard-code. §2 title-line colour corrected (`404040` on UOB and Golden Bridge only). Nothing removed. |

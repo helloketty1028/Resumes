@@ -46,7 +46,7 @@
 规则：
 1. 开工前列出**实际读取**的文件路径与版本号；读不到就明说，不得假装读过。
 2. `archive\` 只读，不作为事实来源。
-3. claude.ai Project knowledge 中的副本（尤其旧文件 `Wilson_Master_Career_Profile.md`、`project-achievement-library.md`、`Resume_Layout_Spec.md`）**不作为事实来源**；与本地不一致时以本地为准，并在汇报中列出差异。
+3. 只使用本地文件。claude.ai Project knowledge 自 2026-10-25 起不再存放素材库副本；若 Knowledge 中出现任何同名文件，**不作为来源**，并在汇报中指出。`master\v2.0-draft\reference\` 只作参考（已合并内容以 01–05 为准）。
 4. 版式参考：`templates\wilson-2026_TPM_Bank_template.docx`（只取版式，不作为事实证据）。内容底稿可参考 `Resumes\wilson-2026_[Family]_[Lens]_LIB_V5_0_0.docx`（📄 级来源，措辞以 03 为准）。
 5. JD 只代表雇主要求，不是我的经历证据。
 6. Skill 使用：可按需调用 `/resume-tailor`（claim 记录与三维评审方法）、`/resume-tailoring`（仅用其"经验挖掘提问"）、`/resume-optimizer`（ATS 与文档检查）、`/banking-resume-optimizer` + docx skill（DOCX 编辑与红字标记机制）。**任何 skill 的角色族分类、评分、底稿文件名、自动更新素材库等步骤，与 01–05 冲突时一律以 01–05 为准**：用 05 §2 的 3 族（ATL / SM / TPM）× 2 lens（BNK / INT），不打总分，不自动写事实库。
@@ -163,5 +163,5 @@
 2. 使用的最强证据（ID）
 3. 关键 gap 与仍未解决的不确定项
 4. DOCX / PDF 是否实际渲染检查、页数
-5. 本地与 Project knowledge 的差异（若有）
+5. 实际读取的本地文件与版本号
 6. 候选回灌项共几条，建议 Y / L / Q / N 各几条，以及我在 5A 的决定结果（最终交给工具 B 的条数）

@@ -115,7 +115,7 @@
 
 - 扫描 `C:\Users\surface\resumes\applications\` 下各申请目录的简历与审计文件，列出引用了被修改、降级或退役事实的申请（目录、原句、影响程度）。**不自动改旧简历**，由我决定。
 - 涉及职位、日期、团队规模、Metrics Bank 数字等背调敏感项，标为高优先级。
-- 询问是否同步到 claude.ai Project knowledge 中的同名文件；未经同意不同步。
+- 不同步到 claude.ai Project knowledge（2026-10-25 起 Knowledge 不存放素材库副本，只用本地文件）。
 
 ---
 
