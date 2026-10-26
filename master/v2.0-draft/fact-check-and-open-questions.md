@@ -1,6 +1,6 @@
 # Wilson Zhang — Fact-Check Register and Open Questions
 
-**Version:** v2.4 · 2026-10-20 · **Auxiliary file — the single register of conflicts, open questions and decisions** (maintained independently [CONF 2026-10-16]). Icons per `01_Resume_Master_Rules.md` §3.
+**Version:** v2.5 · 2026-10-26 · **Auxiliary file — the single register of conflicts, open questions and decisions** (maintained independently [CONF 2026-10-16]). Icons per `01_Resume_Master_Rules.md` §3.
 **Rule:** No conflict below has been resolved on your behalf. Where you confirmed a value in an earlier session, it is shown as the **proposed default** and still needs your reconfirmation.
 
 ---
@@ -23,6 +23,7 @@
 | D-12 | 2026-10-20 | OQ-R1 closed: resumes use British spelling (Singapore Standard English), consistent within a document; a target-role title quoted from the JD keeps the JD's spelling (e.g. "Program Manager") | 01 §6, §9, §11 |
 | D-13 | 2026-10-20 | Readability standard adopted for every tailored resume: three readers (HR recruiter, hiring manager, ATS); page 1 answers who / what scale / why this role; bullets target 2 lines, cap 3; 1–2 numbers per bullet; layout limits in 04 §3A. The cold-read test and §9 readability checklist lines (RD-05) were not selected and remain a proposal | 01 §6, §6A; 04 §3A, §6 |
 | D-14 | 2026-10-20 | OQ-R2 closed: the Professional Summary is about three short paragraphs (≈⅓ page); the earlier "about one page" wording is superseded | 01 §6, §11 |
+| D-15 | 2026-10-26 | Confirmed personal change-approval duty: before every production release ("PI" = production implementation, not a SAFe Program Increment), for both platform lines (CEW + CCD), he prepares the CRQ himself and presents at the CAB — go-live plan, risk controls, rollback plan, impact assessment, test results (SIT/UAT sign-off) and database changes. Role at CAB = presenter; CAB membership, frequency and approval rates not recorded | 03 PA-03 §4, §9, §10; PA-03.5 |
 
 ## 0A. Open-Question Index (all files)
 
@@ -174,3 +175,4 @@ AI Park 2016.4 – 2017.9 and pilots 2016/2017/2017 · Hengshunyuan 2017.10 – 
 | v2.2 | 2026-10-16 | Made the single question/decision register: added §0 decision log (D-01 – D-08) and §0A open-question index across all files; source coverage refreshed; CF-12 resolved; OQ-2.1 marked answered, OQ-2.4 superseded by C7, OQ-3.8 partly answered. Nothing removed. |
 | v2.3 | 2026-10-17 | TEKsystems back-fill: D-09 (no US-team claim), D-10 (FU-5 closed), D-11 (FU-6 closed); C4 partly answered (03 v4.1). Nothing removed. |
 | v2.4 | 2026-10-20 | Readability-standard back-fill: D-12 (spelling), D-13 (readability standard), D-14 (Summary length); OQ-R1 and OQ-R2 closed in 01 §11. Nothing removed. |
+| v2.5 | 2026-10-26 | D-15 (CRQ / CAB personal duty, 03 v4.2 PA-03.5). Nothing removed. |

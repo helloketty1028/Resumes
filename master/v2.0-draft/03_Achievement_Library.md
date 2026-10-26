@@ -1,6 +1,6 @@
 # 03 — Achievement Library
 
-**Version:** v4.1 · 2026-10-17 · **Status: ACTIVE DRAFT — clarifications C1–C7 open (see §6; C4 partly answered)**
+**Version:** v4.2 · 2026-10-26 · **Status: ACTIVE DRAFT — clarifications C1–C7 open (see §6; C4 partly answered)**
 **Role of this file:** Every achievement with its source, status, ownership, role-family relevance, safe resume wording and interview angle — plus the **Metrics Bank (§0A)**, the single home for every number. Rules and icons: `01_Resume_Master_Rules.md`. Profile facts: `02_Candidate_Profile.md` v3.0.
 **Built from:** `project-achievement-library.md` v3.1 (carried over verbatim except the edits listed in the change log §5.4) + `master-career-profile.md` v2.2 §7 (Metrics Bank) + confirmations of 2026-10-16 (02 §8).
 **Supersedes:** project-achievement-library v3.1 (archived in `archive/v2.2_snapshot_2026-10-16/`) and v2.1 (archived as `archive/project-achievement-library_v2.1.md`). **No achievement was removed.** §5 maps every earlier item to its new ID and lists the items proposed for retirement. They are kept until you decide.
@@ -191,13 +191,13 @@ ATL  : PA-07 ─ X-04 ─ PA-01 ─ PA-05 ─ PA-10  (recent hands-on now eviden
 1. **Background** — Releases must be measurable, governed and audit-ready under MAS TRM.
 2. **Scope** — Delivery KPIs, CI/CD release governance, quality gates, secure SDLC, SIT/UAT sign-off, contribution to bank-wide standards.
 3. **Technologies** — Bitbucket, Jenkins, SonarQube, Aldon, JUnit; automated regression and penetration testing in CI/CD; Jira / Confluence. [LIB]
-4. **Responsibilities & decisions** — Set delivery KPIs (deployment frequency, MTTR, incident trend, change-failure rate) and the SonarQube coverage gate [LIB]; required SIT/UAT sign-off on all releases [LIB]; **contributed to** bank-wide SDLC, coding, code-review and architecture-review standards ✅[CONF] (locked verb).
+4. **Responsibilities & decisions** — Set delivery KPIs (deployment frequency, MTTR, incident trend, change-failure rate) and the SonarQube coverage gate [LIB]; required SIT/UAT sign-off on all releases [LIB]; **contributed to** bank-wide SDLC, coding, code-review and architecture-review standards ✅[CONF] (locked verb). **Personally prepares the change request (CRQ) before every production release for both platform lines and presents the go-live plan, risk controls, rollback plan, impact assessment, test results (SIT/UAT sign-off) and database changes at the Change Advisory Board (CAB)** ✅[CONF 2026-10-26].
 5. **Challenges** — Balancing delivery speed with regulatory controls; consistency across onshore and offshore squads.
 6. **Actions** — Quality gates in the pipeline; secure SDLC, DPIA and data governance under MAS TRM ✅; coached teams on new practices and tooling, including AI-assisted engineering. [LIB]
 7. **Outcomes** — Audit-ready releases; SIT/UAT sign-off on all releases. 📄
 8. **Metrics** — 99% SonarQube coverage gate 📄 (❓ new-code or overall coverage? An interviewer will ask.)
-9. **Stakeholders** — Squads, QA, DevOps, compliance, risk, architecture-review board.
-10. **Interview** — "How do you measure engineering performance?" (DORA-style KPIs) · "How do you balance speed and control in a regulated bank?"
+9. **Stakeholders** — Squads, QA, DevOps, compliance, risk, architecture-review board, Change Advisory Board (CAB).
+10. **Interview** — "How do you measure engineering performance?" (DORA-style KPIs) · "How do you balance speed and control in a regulated bank?" · "How do you get a high-risk change approved?" / "Walk me through your release approval process." → CRQ preparation; CAB presentation of the go-live plan, risk controls, rollback plan, impact assessment, SIT/UAT sign-off and database changes.
 11. **Relevance** — TPM ●●● · SM ●●● · ATL ●●
 
 | ID | Achievement | Source | Status | Safe resume wording |
@@ -206,6 +206,7 @@ ATL  : PA-07 ─ X-04 ─ PA-01 ─ PA-05 ─ PA-10  (recent hands-on now eviden
 | PA-03.2 | Quality gates | LIB | 📄 | Enforced quality gates on Bitbucket, Jenkins, SonarQube and Aldon — JUnit, a 99% SonarQube coverage gate, automated regression and penetration testing in CI/CD. |
 | PA-03.3 | Bank-wide standards | CONF | ✅ | Contributed to bank-wide SDLC, coding and code-review standards and to architecture-review governance beyond my own squads. |
 | PA-03.4 | Secure SDLC under MAS TRM | LIB + CONF | ✅ | Ran secure SDLC, DPIA and data governance in line with MAS TRM. |
+| PA-03.5 | Change approval — CRQ and CAB | CONF 2026-10-26 | ✅ | Personally prepare the change request for every production release across both platform lines and present the go-live plan, risk controls, rollback plan, impact assessment, test results (SIT/UAT sign-off) and database changes to the Change Advisory Board. |
 
 ---
 
@@ -567,6 +568,7 @@ HSM, MPC/TSS, TEE, PKI, post-quantum migration awareness. **Not production.** Sp
 |---|---|---|
 | v4.0 (03) | 2026-10-16 | Renamed to `03_Achievement_Library.md`. Relevance codes renamed TDM→TPM, LSE→ATL (outside §5, which keeps historical wording). Metrics Bank moved in from profile v2.2 §7 as §0A (+6 rows). Added ⚠️ icon row; PA-01 settlement context + PA-01.7; PA-02 §4 no-SRE-team note + PA-02.3; PA-11.5; PA-16.5; X-05 vendor governance; X-06 incident management / regulatory-reporting input; inventory rows for X-05/X-06; §5.3 v1.0 coverage map. Header baseline/archive references corrected. Nothing removed. |
 | v4.1 | 2026-10-17 | TEKsystems back-fill (fact-updates/2026-10-17_TEKsystems-backfill, A1/A2/A4/A5/A6 approved): PA-18 publishing workflow + new PA-18.2 (O5); X-02 cross-time-zone collaboration (India, Thailand, Indonesia) and MVP prioritisation practice, with safe wording; PA-08 ownership O1 and Apr 2026; PA-07 go-live May 2026 after formal approval (C4 partly answered). Nothing removed. |
+| v4.2 | 2026-10-26 | New fact (fact-updates/2026-10-26_CRQ-CAB, A1 approved with edits): PA-03 §4 personal CRQ preparation and CAB presentation for every production release on both platform lines; §9 CAB added; §10 interview angle added; new PA-03.5 ✅[CONF 2026-10-26]. PA-01 §6 [LIB] "change control" unchanged. Nothing removed. |
 
 ## 6. Question Queue — one or two projects at a time
 
