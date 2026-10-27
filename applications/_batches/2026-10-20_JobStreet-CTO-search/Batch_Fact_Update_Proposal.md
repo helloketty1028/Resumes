@@ -1,4 +1,4 @@
-# Batch Fact Update Proposal — 2026-10-20 JobStreet CTO search（滚动草稿）
+# Batch Fact Update Proposal — 2026-10-20 JobStreet CTO search（滚动草稿，2026-10-26 更新：新增 B-11 至 B-22；B-12、B-15、B-16、B-17、B-22 已在 C3 答复）
 
 > **回灌候选** = 本批求职中你新确认、可写回事实库 `master\v2.0-draft\` 供以后复用的事实。
 > 本文件只是候选清单：阶段六统一整理去重，在审批门 C4 由你逐条选 **Y 入库 / E 改后入库 / Q 只登记待确认 / L 仅限本次 / N 不入库**。**未选中的一律 N。** 只有 Y / E / Q 交给工具 B；工具 C 不写事实库。
@@ -15,5 +15,17 @@
 | B-08 | RESTRICT | PA-16.2, X-02 | — | 乙方售前经验仅 AI Park（投标、写标书）；无其他乙方售前、报价或合同谈判经验 | [CONF 2026-10-20] | ✅ | 03 PA-16；05 §7 | — | Y | 默认 N |
 | B-09 | CLARIFY（关闭 C7 b） | PA-01.3, 03 §5.2, v1.0 U1 | [LIB] "concurrency-control modules" 不在你的亲自编码清单中 → ❓ keep or drop | 保留并作为技术优势写入，用 [LIB] 原句："personally authoring core transaction-processing and concurrency-control modules" | [CONF 2026-10-21] | ✅（具体机制 ❓） | 03 PA-01.3, §5.2 | 面试必问具体机制 | Y | 默认 N |
 | B-10 | RESTRICT（保留不退役） | OQ-2.3 第三项, HR-4, HR-5, 03 §0A, §5.2 | VV "10M concurrent HTTP requests"、Baidu "5–10 million QPS"：⛔ / ❓，曾提议退役 | 保留在事实库，不退役；口径（生产峰值 / 每日总量 / 压测或设计目标）确认前不用于简历 | [CONF 2026-10-21] | ❓（维持） | 03 §0A, §5.2；fact-check HR-4 / HR-5 | ⚠ 面试高风险 | Q | 默认 N |
+| B-11 | Q | 技能清单 React | 有 React 前端开发经验（雇主 / 时期未记录） | 补雇主、时期、深度 | 02 草稿审计 | ❓ | skills inventory | — | Q | 默认 N |
+| B-12 | CLARIFY | PA-03 / §0A 99% SonarQube | “99% SonarQube coverage gate” | 门禁针对**全部代码**（all code），不只是新代码 | [CONF 2026-10-26] C3 K5 | ✅ | 03 §0A, PA-03 | 面试可能追问 | Y | 默认 N |
+| B-13 | Q | 技能清单 Spring Cloud / Kafka | A/P ❓ | 补当前 hands-on 深度（亲手写还是选型 + 指导） | 03、04 审计 | ❓ | skills inventory | — | Q | 默认 N |
+| B-14 | Q | PA-01 API | hub API 设计 | 补：hub 的 API 契约是否 REST；核心系统接口是新建还是复用 | 01 审计 | ❓ | 03 PA-01 | — | Q | 默认 N |
+| B-15 | CLARIFY | PA-01.5 | 向 steering committee 汇报（CBPR+ 项目） | 只有**一个** steering committee（单数）。是否也汇报风险 / 决策、交付 KPI 是否上报：仍未答 | [CONF 2026-10-26] C3 K2 | ✅（后半 ❓） | 03 PA-01.5 | — | Y（后半 Q） | 默认 N |
+| B-16 | ADD | 02 §1 / Talentvis 终稿 | “start-ups and scale-ups”（无依据） | VV Technology 与 Golden Bridge 可称 **scale-ups**，“start-ups and scale-ups” 可用 | [CONF 2026-10-26] C3 K1 | ✅ | 02 §1 | — | Y | 默认 N |
+| B-17 | CLARIFY | PA-11.1 | “built its microservices platform from scratch” | 微服务**框架代码由你亲手编写**（O1），“built” 成立 | [CONF 2026-10-26] C3 K4 | ✅ | 03 PA-11.1 | 面试会追问框架设计细节 | Y | 默认 N |
+| B-18 | Q | PA-07 / C4 | AI code-review 服务、eMemo agent | 补：code-review 是否你发起；25 人是否都在用；eMemo agent 是否投产、是否经正式审批；RAG 助手审批情况 | 08、10 审计 | ❓ | 03 PA-07 | — | Q | 默认 N |
+| B-19 | Q | PA-01 ISO 20022 | MT-to-MX 迁移 | 补：MT↔MX 报文转换是否由你或 hub 团队实现 | 05 审计 | ❓ | 03 PA-01 | — | Q | 默认 N |
+| B-20 | Q | X-03 | 交付治理 | 补：在 UOB 是否亲自与 PO 做 backlog 优先级排序和 sprint 规划 | 06 审计 | ❓ | 03 X-03 | — | Q | 默认 N |
+| B-21 | Q | PA-16 AI Park | SaaS 模式面向 B2B / B2G | 补：2017-09 前是否有真实付费客户；是否算 0-to-1 建设 | 08、09 审计 | ❓ | 03 PA-16；02 §6.6 | — | Q | 默认 N |
+| B-22 | ADD | PA-01.5 / X-02 | 向高管和 steering committee 汇报 | 也向**业务团队（business team）**汇报状态、风险和决策；“explains technical choices in business terms” 无依据，不再使用 | [CONF 2026-10-26] C3 K3 | ✅ | 03 PA-01.5, X-02 | — | Y | 默认 N |
 
 相关但不在本批重复登记：TEKsystems 提案 TU-13（VV / AI Park 职位英文名）尚未入库（2026-10-21 你再次确认这两个名称），见 `applications\2026-10-17_TEKsystems_Program-Manager\Fact_Update_Proposal.md`。

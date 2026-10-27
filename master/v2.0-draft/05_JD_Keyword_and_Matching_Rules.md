@@ -1,6 +1,6 @@
 # 05 — JD Keyword and Matching Rules
 
-**Version:** v1.0 · 2026-10-16 · **Status:** ACTIVE DRAFT — ⚠️ / ❓ items await your decisions
+**Version:** v1.1 · 2026-10-26 · **Status:** ACTIVE DRAFT — ⚠️ / ❓ items await your decisions
 **Role of this file:** How a job description is parsed, screened, matched to evidence, keyword-mapped, ordered and compressed into a ≤3-page tailored resume. **It holds no career facts** — it cites IDs from 02 and 03.
 **Built from:** `master-career-profile.md` v2.2 §8 (gaps, fast-reject) · Master v1.0 §10 (library → role map) · six [LIB] V5 docx (ATS keyword pools, family gaps, tailoring guides — verbatim) · achievement library v3.1 role ratings · resume-tailor method · decisions of 2026-10-16.
 **Decisions applied [CONF 2026-10-16]:** three role families (ATL / SM / TPM) × two industry lenses (BNK / INT) · **three-dimension review, no aggregate score** · skills inventory and fact-check stay auxiliary files.
@@ -209,7 +209,8 @@ A hit is reported with the reason; you decide whether to continue.
 5. Trim the Core Competencies table to the rows the JD needs.
 
 **Visibility of selective content**
-- `on-request` only: Pureland (PA-20 — needs disclosure plan), Crypto/key-management (X-03 — knowledge-level qualifier mandatory), personal Android apps (PA-21).
+- `on-request` only: Crypto/key-management (X-03 — knowledge-level qualifier mandatory), personal Android apps (PA-21).
+- Never: Pureland (PA-20 retired, D-16).
 - Every exclusion is listed in the review package with its reason (not in the resume).
 
 ## 7. Gaps and Honest Handling
@@ -273,3 +274,4 @@ Your 2026-10-16 answer did not settle this, so the earlier filter is recorded **
 | Version | Date | Change |
 |---|---|---|
 | v1.0 | 2026-10-16 | Created. Workflow with approval gate; family × lens classification; six cells with verbatim [LIB] keyword pools, gaps and tailoring guides; parsing, fast-reject, matrix, keyword, ordering and compression rules; gaps (verbatim from v2.2 §8 + common [LIB] gaps); filters recorded as ⚠️; % scoring retired. |
+| v1.1 | 2026-10-26 | §6 visibility rule: Pureland moved from `on-request` to never (PA-20 retired, D-16). Nothing else changed. |

@@ -1,6 +1,6 @@
 # Wilson Zhang — Technical Skills Inventory
 
-**Version:** v2.3 · 2026-10-17 · **Auxiliary file** (maintained independently [CONF 2026-10-16]) · PA-Q1 and 2026-10-16 confirmations applied
+**Version:** v2.4 · 2026-10-26 · **Auxiliary file** (maintained independently [CONF 2026-10-16]) · PA-Q1 and 2026-10-16 confirmations applied
 Source codes and status icons: see `01_Resume_Master_Rules.md` §3. Usage in resumes: 01 §9 and 05 §5.
 
 **Depth levels**
@@ -20,7 +20,7 @@ Source codes and status icons: see `01_Resume_Master_Rules.md` §3. Usage in res
 | Skill | Evidence anchor | Depth | Source | Status |
 |---|---|---|---|---|
 | Java (JVM tuning, concurrency) | UOB payment services; GBD (JDK 11); every role 2008– | P | [R22][LIB] | ✅ |
-| Python | Pureland quant/backtesting; agentic tooling | P | [LIB][CONF] | ✅ |
+| Python | Pureland (removed from work history — not citable, D-16) quant/backtesting; agentic tooling | P | [LIB][CONF] | ✅ |
 | Shell | Sohu, Renren | P | [R22] | ✅ |
 | JavaScript — React | Hands-on front-end | P | [CONF] | ✅ (employer ❓) |
 | JavaScript — Angular | Baidu Nuomi, Renren | P/A ❓ | [R22] | ❓ |
@@ -42,7 +42,7 @@ Source codes and status icons: see `01_Resume_Master_Rules.md` §3. Usage in res
 | Resin | Baidu Nuomi (front-end proxy) | P | [R22] | ✅ |
 | Netty, ActiveMQ | Summary skill only | F | [R22][LIB] | ❓ no project anchor |
 | SSH (Struts/Spring/Hibernate) | Sohu legacy stack (replaced) | P | [R22] | ✅ — Hibernate via SSH |
-| Spring Batch | UOB CCD — scheduled-job processing module, personally built | P | [CONF 2026-10-16] | ✅ — **moved from un-anchored** |
+| Spring Batch | UOB CCD — scheduled-job processing module, personally built; UOB payment hub — Spring Batch jobs loading migrated payment and entitlement data (PA-01.9) [CONF 2026-10-26] | P | [CONF 2026-10-16] | ✅ — **moved from un-anchored** |
 | Spring AI, Liquibase | Skills line only | ❓ | [LIB] | ❓ |
 
 ## 3. Messaging and Streaming
@@ -54,7 +54,7 @@ Source codes and status icons: see `01_Resume_Master_Rules.md` §3. Usage in res
 | AWS SQS / SNS | GBD | A/P ❓ | [R22] | ✅ new |
 | Amazon MQ | Skills line only | ❓ | [LIB] | ❓ |
 | Flume | VV data platform | A | [R22] | ✅ new |
-| Spark Streaming / Spark SQL / Spark Core | VV, AI Park, Pureland | A/P ❓ | [R22][LIB] | ✅ |
+| Spark Streaming / Spark SQL / Spark Core | VV, AI Park, Pureland (removed from work history — not citable, D-16) | A/P ❓ | [R22][LIB] | ✅ |
 | **Flink** | VV ad-order tracking and real-time profiling | ❓ | [LIB] only | ⚠️ **CF-07** — absent from [R22] |
 
 ## 4. Data Stores and Search
@@ -69,11 +69,11 @@ Source codes and status icons: see `01_Resume_Master_Rules.md` §3. Usage in res
 | memcached | Sohu (replaced) | P | [R22] | ✅ |
 | MongoDB | Sohu, Baidu, AI Park | P | [R22][LIB] | ✅ |
 | HBase | AI Park | A/P | [R22][LIB] | ✅ |
-| Hive, MapReduce, YARN, Hadoop | VV, AI Park, Pureland | A | [R22][LIB] | ✅ |
+| Hive, MapReduce, YARN, Hadoop | VV, AI Park, Pureland (removed from work history — not citable, D-16) | A | [R22][LIB] | ✅ |
 | Elasticsearch | GBD, VV | A/P | [R22] | ✅ — **moved from un-anchored** |
 | Solr | Renren, Sohu, Baidu | P | [R22] | ✅ new |
 | AWS DynamoDB / RDS | GBD | A | [R22] | ✅ — **moved from un-anchored** |
-| AWS S3 | GBD, Pureland (tick data) | P/A | [R22][LIB] | ✅ |
+| AWS S3 | GBD, Pureland (removed from work history — not citable, D-16) (tick data) | P/A | [R22][LIB] | ✅ |
 | Cloudera | UOB C360 (evaluated as framework) | A | [LIB] | ✅ — "evaluated/selected", not operated ❓ |
 | Vector databases | Skills line only | ❓ | [LIB] | ❓ |
 
@@ -81,7 +81,7 @@ Source codes and status icons: see `01_Resume_Master_Rules.md` §3. Usage in res
 
 | Skill | Evidence anchor | Depth | Source | Status |
 |---|---|---|---|---|
-| AWS (general cloud-native) | GBD, VV, GMS, Pureland | A/P | [R22][LIB] | ✅ |
+| AWS (general cloud-native) | GBD, VV, GMS, Pureland (removed from work history — not citable, D-16) | A/P | [R22][LIB] | ✅ |
 | AWS Route 53, API Gateway, EC2/ECS, Lambda, Cognito, IAM, ELB, CloudWatch, ECR | GBD (all); VV (CloudWatch) | A | [R22] | ✅ — **moved from un-anchored** |
 | **Alibaba Cloud (aliyun)** | Hengshunyuan | A/P | [R22] | ✅ anchor · ⚠️ **CF-08** vs [LIB] "AWS" |
 | Azure | Exposure | X | [LIB] | ✅ keep "exposure" |
@@ -121,17 +121,17 @@ Microservices (Dubbo era → Spring Cloud → Spring Boot/Camel) ✅ · API gate
 | Causal inference (profiling) | VV | ❓ | [LIB] | ❓ tied to CF-07 |
 | MLOps (recommendation) | VV | A | [LIB] | 🔶 |
 | Computer-vision pipeline integration (licence-plate/portrait recognition) | AI Park | A | [R22] | ✅ new — "added AI processing step"; not model training |
-| Headless Claude Code agents; Anthropic Messages API | UOB AI Code Review; personal apps; Pureland agent | P | [CONF][LIB] | ✅ |
+| Headless Claude Code agents; Anthropic Messages API | UOB AI Code Review; personal apps; Pureland (removed from work history — not citable, D-16) agent | P | [CONF][LIB] | ✅ |
 | Prompt engineering, A/B evaluation; AgentOps/LLMOps | UOB | P | [CONF] | ✅ |
 | LLM evaluation concepts (LLM-as-judge, trajectory eval, RAGAS) | Interview prep only | F | [CONF] | ✅ — **knowledge, not a production claim** |
 | Responsible AI — MAS FEAT | UOB | P | [CONF] | ✅ |
 | RAG, LangChain, vector DBs | Skills line only | ❓ | [LIB] | ❓ — where in production? |
-| Quant libraries: pandas, NumPy, backtrader, statsmodels | Pureland / personal | P | [LIB][CONF] | ✅ |
+| Quant libraries: pandas, NumPy, backtrader, statsmodels | Pureland (removed from work history — not citable, D-16) / personal | P | [LIB][CONF] | ✅ |
 | Large-scale model training / GPU inference infrastructure | — | — | — | Never claim |
 
 ## 9. Payments and Banking Domain
 
-ISO 20022 (MT→MX) ✅ · CBPR+ ✅ · RTGS ✅ · TT ✅ · SWIFT ✅ · pain.002 ✅ · payment initiation/validation/enrichment/status tracking ✅ · CASA integration ✅ · retail unsecured lending servicing and collections ✅ · customer-360 / KYC-relevant data ✅ · KYC (hierarchical, multi-country) ✅ GBD · payment subsystem incl. **reconciliation** ✅ VV [R22] · online payment ✅ AI Park · VWAP / portfolio and risk analytics 🔶 Pureland (selective)
+ISO 20022 (MT→MX) ✅ · CBPR+ ✅ · RTGS ✅ · TT ✅ · SWIFT ✅ · pain.002 ✅ · payment initiation/validation/enrichment/status tracking ✅ · CASA integration ✅ · retail unsecured lending servicing and collections ✅ · customer-360 / KYC-relevant data ✅ · KYC (hierarchical, multi-country) ✅ GBD · payment subsystem incl. **reconciliation** ✅ VV [R22] · online payment ✅ AI Park · VWAP / portfolio and risk analytics 🔶 Pureland (removed from work history — not citable, D-16) (selective)
 **Never claim:** core banking (Temenos, Finacle) · Murex · kdb+/q · Treasury/FX core · equity OMS core
 
 ## 10. Security, Risk and Governance
@@ -154,3 +154,4 @@ TOGAF · ITIL · service mesh (Istio/Envoy) · GCP depth · Go/Rust (**unless CF
 | v2.1-DRAFT | 2026-10-16 | PA-Q1 answers applied (Spring Batch, Kafka anchored). |
 | v2.2 | 2026-10-16 | Kept as an auxiliary file. Icon reference → 01 §3. RHEL ❓→✅ P and new "SQL (general)" row per your confirmation; SRE-training note in §10. Nothing removed. |
 | v2.3 | 2026-10-17 | Miro added to §11 with employer anchors (VV, GBD, UOB) [CONF 2026-10-17]; use case still open (OQ-T1 in fact-check). Nothing removed. |
+| v2.4 | 2026-10-26 | Interview Bank back-fill: Spring Batch row adds the UOB payment-hub migration anchor (PA-01.9); 8 Pureland anchors annotated "removed from work history — not citable, D-16" (depth unchanged; Python / quant libraries default per B4). Nothing removed. |

@@ -1,6 +1,6 @@
 # 03 — Achievement Library
 
-**Version:** v4.2 · 2026-10-26 · **Status: ACTIVE DRAFT — clarifications C1–C7 open (see §6; C4 partly answered)**
+**Version:** v4.6 · 2026-10-27 · **Status: ACTIVE DRAFT — clarifications C1–C7 open (see §6; C4 partly answered)**
 **Role of this file:** Every achievement with its source, status, ownership, role-family relevance, safe resume wording and interview angle — plus the **Metrics Bank (§0A)**, the single home for every number. Rules and icons: `01_Resume_Master_Rules.md`. Profile facts: `02_Candidate_Profile.md` v3.0.
 **Built from:** `project-achievement-library.md` v3.1 (carried over verbatim except the edits listed in the change log §5.4) + `master-career-profile.md` v2.2 §7 (Metrics Bank) + confirmations of 2026-10-16 (02 §8).
 **Supersedes:** project-achievement-library v3.1 (archived in `archive/v2.2_snapshot_2026-10-16/`) and v2.1 (archived as `archive/project-achievement-library_v2.1.md`). **No achievement was removed.** §5 maps every earlier item to its new ID and lists the items proposed for retirement. They are kept until you decide.
@@ -39,7 +39,7 @@ Carried over verbatim from `master-career-profile.md` v2.2 §7, then extended (r
 | Metric | Attribution | Status |
 |---|---|---|
 | 18+ years | Career total since Jul 2008 | ✅ |
-| 25 engineers (CEW 15 + CCD 10, onshore + offshore), 2 platform lines, millions of accounts | UOB | ✅ [CONF 2026-10-16]; "20+" remains accurate |
+| 25 engineers (CEW 15 + CCD 10, onshore + offshore), 2 platform lines, millions of accounts | UOB; the engineers come from the four IT service vendors (X-05) [CONF 2026-10-26]; engineering managers (UOB permanent staff) are not counted in the 25 [CONF 2026-10-27] | ✅ [CONF 2026-10-16]; "20+" remains accurate |
 | MX-rich live May and Aug 2025; coexistence retired Aug 2026; releases every 2–3 months | UOB CBPR+ | ✅ [CONF 2026-10-16] |
 | AI review: senior review time cut by an estimated ~80% | UOB | ✅ estimate, formula in library PA-07 |
 | 99.9%+ availability; no service interruption at ISO 20022 cutover | UOB | ✅ [LIB][CONF] |
@@ -63,6 +63,7 @@ Carried over verbatim from `master-career-profile.md` v2.2 §7, then extended (r
 | **new (from v1.0)** · "multi-million daily transactions" | Unattributed in [LIB] ("payments, marketplaces, SaaS"; v1.0 V5 put it under VV) | ⛔ hold — attribution and measure unknown; ask with FU-1 |
 | **new (from v1.0)** · "millions of real-time sensor and transaction events" | AI Park big-data stack (PA-16) | 📄 [LIB]; also used in [TPL] |
 | **new** · Release cadence every 2–3 months after go-live | UOB CBPR+ (PA-01) | ✅ (already in row 3; listed for lookup) |
+| **new** · Incident-command time targets: coordinator in 15 min · hold/fail-over decision in 10 min · first stakeholder update in 30 min, then hourly · escalate at 1 h · postmortem within 48 h | UOB (X-06) | ✅ [CONF 2026-10-26] practice targets, not measured outcomes; "resolved within half a day" ❓ OQ-5.8 |
 
 
 ---
@@ -90,7 +91,7 @@ Carried over verbatim from `master-career-profile.md` v2.2 §7, then extended (r
 | PA-17 | Baidu Nuomi merchant-side parallel order system | Baidu · 2014 | O2 + project lead | ●● | ●● | ●● | 📄 |
 | PA-18 | Sohu CMS v5, OpenAPI messaging, SEO | Sohu · 2012–14 | O1 + O2 | ● | ● | ●● | 📄 |
 | PA-19 | Renren shopping site, Mall, CRM | Renren · 2008–12 | O1 | — | ● | ● | 📄 |
-| PA-20 | Wealth / quant platform (selective) | Pureland · 2020– | Advisory ❓ | — | ● | ●● | ⛔ until disclosure |
+| PA-20 | Wealth / quant platform (selective) | Pureland · 2020 – before Oct 2022 | Advisory ❓ | — | ● | ●● | ⛔ retired 2026-10-26 (D-16) |
 | PA-21 | Personal Android apps (Camel learning, AI quiz) | Personal | O1 | — | — | ● | ❓ resume use |
 | X-01 | Security and data-migration controls, across 4 employers | UOB, GBD, VV, AI Park | O2 | ●● | ●● | ●● | ✅ |
 | X-02 | UOB platform leadership and commercial authority | UOB · 2022– | PL + CV | ●●● | ●●● | ● | ✅ |
@@ -130,7 +131,8 @@ ATL  : PA-07 ─ X-04 ─ PA-01 ─ PA-05 ─ PA-10  (recent hands-on now eviden
     customer)            • pain.002 status tracking
    ```
    **Settlement context ✅/🔶 [CONF 2026-10-16]:** the hub sits upstream of processing and settlement at a MEPS+ participant bank (see 02 §8 CF-N7 for the defensibility note — do not claim cross-border payments in general settle via MEPS+).
-3. **Technologies actually used** — Java, Spring Boot, Apache Camel ✅[CONF], event-driven integration, JVM tuning; pipeline on Bitbucket / Jenkins / SonarQube / Aldon; Splunk; Jira / Confluence. [LIB]
+   **Design for integrity and resilience** ✅[CONF 2026-10-26]: (a) every payment carries a unique business reference enforced in the database, plus an explicit state machine, so retries never create duplicates; (b) reference data is replicated locally and managed in the hub, keeping source systems off the critical path (trade-off: data freshness); (c) hand-off to downstream systems is asynchronous, with retry and an exception queue — on a timeout the hub checks downstream status before resending; (d) it runs on Java / Spring Boot with a database and a message queue (MQ). Database and MQ products: ❓ OQ-5.4.
+3. **Technologies actually used** — Java, Spring Boot, Apache Camel ✅[CONF], event-driven integration, JVM tuning; pipeline on Bitbucket / Jenkins / SonarQube / Aldon; Splunk; Jira / Confluence. [LIB] A message queue (MQ) ✅[CONF 2026-10-26] (product ❓ OQ-5.4).
 4. **Responsibilities & decisions**
    - Led end-to-end system design: API contracts, orchestration, validation, enrichment, status tracking. [LIB]
    - Owned programme delivery: scope, roadmap, milestones, RAID, release planning, production rollout. [LIB]
@@ -140,6 +142,8 @@ ATL  : PA-07 ─ X-04 ─ PA-01 ─ PA-05 ─ PA-10  (recent hands-on now eviden
    - [LIB]'s "concurrency-control modules" was not in your list → ❓ keep or drop (C7).
 5. **Challenges** — Mission-critical live platform; MT/MX coexistence; dependencies on channels, reference data, vendor-delivered and third-party systems; regulatory timeline; latency under high load; sensitive data.
 6. **Actions** — Parallel traffic management and cutover-readiness gates; thread-pool and JVM tuning and removal of synchronous blocking; API/database encryption and credential management; Agile governance with change control and executive status reporting; architecture trade-off forums (legacy vs modern); vendor and SLA governance. [LIB][CONF]
+   **Payment and entitlement data migration** ✅[CONF 2026-10-26]: the hub supported migration of payment data and entitlement data — users, companies, groups and roles (a user can belong to several groups across companies) — from the legacy platform. Each batch was approved in the old system, exported as JSON, validated record by record on the new side against related applications (user accounts, remittance), then loaded by Spring Batch jobs. (A "migrated over several weekends, switched in a maintenance window" version from one interview-prep document is not confirmed — CF-21.)
+   **Coexistence reconciliation** ✅[CONF 2026-10-26]: during MT/MX coexistence, both sides (MT and MX) were reconciled — mandatory, since otherwise mismatched records could not be explained in compliance reporting. Which team ran it, and at which stage: ❓ OQ-5.2 (the hub itself does not reconcile — CF-N4). Interview use only until the owner is known.
 7. **Verified outcomes** — First go-live May 2025; MX-rich releases May and Aug 2025, both before SWIFT's Nov 2025 network deadline; coexistence mode retired Aug 2026; regular releases every 2–3 months ✅[CONF]. Cutover with **no service interruption** 📄; lower end-to-end latency (no figure) 📄; reduced technical debt 📄.
 8. **Metrics** — Team of 15 ✅ · release cadence 2–3 months ✅ · "No service interruption" 📄 · latency delta: none available (your PA-Q1.4 answer gave no CBPR+ figure) → stays qualitative · "10+ interconnected payment domains" ⛔ → proposed replacement by team size (§5.2).
 9. **Stakeholders & complexity** — Business, product owners, operations, compliance, architects, engineering managers, external vendors, third-party banking systems; development, system analysis, QA, DevOps, infrastructure; onshore/offshore across time zones; steering committee. Under MAS TRM.
@@ -148,6 +152,8 @@ ATL  : PA-07 ─ X-04 ─ PA-01 ─ PA-05 ─ PA-10  (recent hands-on now eviden
     - "Walk me through a system you designed." → the hub diagram above (your usual architecture example).
     - "How did you handle a regulatory deadline with many dependencies?" → RAID, vendor SLAs, steering reporting.
     - "A performance problem you solved." → thread pools, blocking calls, JVM.
+    - "How do you prevent duplicate payments?" / "What happens when a downstream call times out?" → §2 design (a) and (c); "How do you handle reference data?" → (b), with the freshness trade-off.
+    - "How did you keep MT and MX consistent during coexistence?" → coexistence reconciliation (owner per OQ-5.2).
 11. **Relevance** — **TPM ●●●** regulated programme with dated milestones · **SM ●●●** modernisation of a mission-critical platform · **ATL ●●●** you personally coded the initiation, permission and status-handling cores.
 
 | ID | Achievement | Source | Status | Safe resume wording |
@@ -159,6 +165,8 @@ ATL  : PA-07 ─ X-04 ─ PA-01 ─ PA-05 ─ PA-10  (recent hands-on now eviden
 | PA-01.5 | Programme ownership | LIB + CONF | ✅ / 📄 | Led a 15-engineer onshore/offshore team and owned end-to-end delivery of the CBPR+ / ISO 20022 programme — scope, roadmap, RAID, release planning and production rollout — shipping upgrades every 2–3 months after go-live and reporting to senior management and the steering committee. |
 | PA-01.6 | Security and data migration | CONF | ✅ | See X-01. |
 | PA-01.7 | Hub context line (from [TPL]) | TPL + CONF | 🔶 | The payment-initiation hub takes requests from Internet Banking and branch channels, applies authorisation, validation, enrichment and pain.002 status tracking, and hands payments to downstream systems — including the SWIFT ISO 20022 flow and CASA — upstream of processing and settlement at a MEPS+ participant bank. |
+| PA-01.8 | Safe-retry design | CONF 2026-10-26 | ✅ | Designed the hub for safe retries: a database-enforced unique business reference and an explicit payment state machine prevent duplicates, and downstream hand-off is asynchronous with retry, an exception queue and a status check before any resend. |
+| PA-01.9 | Entitlement-data migration | CONF 2026-10-26 | ✅ | Led migration of payment and entitlement data (users, companies, groups, roles) from the legacy platform in approved batches — exported as JSON, validated record by record against related applications, and loaded by Spring Batch jobs. |
 
 ---
 
@@ -275,8 +283,9 @@ Led the backend team that delivered tax-certificate generation for completed tra
    ```
 3. **Technologies actually used** — Spring Boot, headless Claude Code, ProcessBuilder, git three-dot diff, Bitbucket / GitHub, SonarQube; prompt A/B testing; AgentOps/LLMOps practice; Responsible AI aligned with MAS FEAT. [LIB][CONF]
 4. **Responsibilities & decisions** — Designed and built the service ✅; **decision:** the AI advises only, and human reviewers keep approval and merge authority ✅; briefed senior management (13-slide deck) ✅.
-5. **Challenges** — Using an LLM agent inside a MAS-regulated bank; review consistency; keeping noise and false positives low ❓.
+5. **Challenges** — Using an LLM agent inside a MAS-regulated bank; review consistency; keeping noise and false positives low — handled by prompt tuning during a one-squad pilot (§6).
 6. **Actions** — Defined four review dimensions; combined deterministic static analysis (SonarQube) with LLM review; A/B-tested prompts; applied FEAT-aligned governance. [LIB][CONF]
+   **Operating controls** ✅[CONF 2026-10-26]: the agent runs in an isolated, read-only environment; the model endpoint is in-region on AWS, reached over a private dedicated connection ✅[CONF 2026-10-27]; prompts and outputs are fully logged; review rules are kept in the repository under normal change approval. The agent environment has no public-internet access — its only outbound path is the private connection to the model endpoint, so code never travels over the public internet ✅[CONF 2026-10-27] (replaces the earlier wording "no outbound network access; code never leaves the bank's network"). Rejection rate: no measured data yet; in current use it is observed to be about zero ✅[CONF 2026-10-27] — an observation, not a metric; not for resume use. Design principles: least privilege and separation of duties (the AI advises; humans approve and merge — PA-07.2) ✅[CONF 2026-10-27]. Agent permissions are task-scoped and time-limited ✅[CONF 2026-10-27]; egress is restricted by a URL allowlist containing only the model endpoint, with rate limiting ✅[CONF 2026-10-27]. Pre-execution rule checks on each tool call: **not implemented — do not claim** [CONF 2026-10-27]. False-positive handling: piloted with one squad first, prompts tuned on feedback to cut unnecessary findings, then expanded ✅[CONF 2026-10-27] (whether all 25 use it: ❓ C4).
 7. **Verified outcomes** — Senior engineers' review time down by an **estimated ~80%** ✅[CONF 2026-10-16] · defect rate "reduced to/by 70–80%" ❓ wording and measure (C1) · new-joiner ramp-up 30–40% faster ✅[CONF earlier], measure ❓ (C3).
 8. **Metrics — how the ~80% is estimated** ✅[CONF 2026-10-16]
    ```
@@ -293,6 +302,8 @@ Led the backend team that delivered tax-certificate generation for completed tra
     - "How do you govern AI in a regulated environment?" → human-in-the-loop rule, FEAT, A/B evaluation.
     - "Design question: automated review at scale." → orchestrator, diff scoping, static + LLM layers.
     - "How did you prove the impact?" → depends on PA-Q1.5.
+    - "How do you secure an AI agent inside a bank?" → least privilege (task-scoped, time-limited permissions) and separation of duties (AI advises, humans approve); isolated read-only sandbox; no public internet — URL allowlist (model endpoint only) with rate limiting over a private connection; full logging. Do not mention tool-call pre-checks (not implemented).
+    - "How did you keep false positives down?" → one-squad pilot, prompts tuned on feedback, then expanded; rejection rate observed at about zero, not yet measured.
 11. **Relevance** — TPM ●● (AI delivery in a regulated bank) · **SM ●●●** (developer productivity, innovation) · **ATL ●●●** (recent hands-on build)
 
 | ID | Achievement | Source | Status | Safe resume wording |
@@ -303,6 +314,7 @@ Led the backend team that delivered tax-certificate generation for completed tra
 | PA-07.4 | Prompt evaluation | LIB | 📄 | Improved review quality through prompt A/B testing and AgentOps/LLMOps practices. |
 | PA-07.5 | New-joiner ramp-up | CONF (earlier) | ✅ (measure ❓ C3) | Shortened new-joiner ramp-up by 30–40% (internal measure). |
 | PA-07.6 | Defect reduction | CONF 2026-10-16 | ❓ C1 | {Reduced defect rate by X% — wording and measure pending.} |
+| PA-07.7 | Operating controls | CONF 2026-10-26 | ✅ | Ran the review agent in an isolated, read-only environment with no public-internet access, calling an in-region model endpoint over a private dedicated connection, with full logging of prompts and outputs and review rules version-controlled under normal change approval. |
 
 ### PA-08 · AI Validation of eMemo and Quotation Documents
 Background: operations reconciled eMemo and quotation documents by hand on a recurring basis. Tech: an AI agent auto-generates validation prompts to check schema alignment and data-relationship consistency. Outcome: the recurring manual task was removed. [LIB] 📄 · Ownership **O1 — personally wrote the agent** ✅[CONF 2026-10-16] · Built **Apr 2026** ✅[CONF 2026-10-16] · Time saved ❓ · TPM ● SM ●● ATL ●●
@@ -347,12 +359,14 @@ Background: operations reconciled eMemo and quotation documents by hand on a rec
 4. **Responsibilities & decisions** — Built the organisation; ran technology selection; took part in product-strategy planning [R22]; owned the technology budget ✅[CONF].
 5. **Challenges** — Building both a team and a platform from nothing at once.
 6. **Actions** — Built the microservice framework; implemented CI/CD and code standards [R22]; resilience engineering, 99% coverage, Kubernetes rollback, AWS cost optimisation [LIB]; **performance design** ✅[CONF 2026-10-16]: Spring Cloud microservices + Kafka asynchronous processing + caching to keep requests off the database (cache-breakdown protection), bringing service processing to millisecond level.
-7. **Outcomes** — **VV-Life v1 closed loop delivered in 2019**, including the payment subsystem's transaction, management and reconciliation modules 📄[R22]; fewer critical incidents and lower cloud cost 📄[LIB] (no figures).
+   **0-to-1 approach** ✅[CONF 2026-10-26]: product and operations teams ran market research before building; a small MVP, then small steps; every new feature behind a toggle so it could be pulled back in minutes; architecture designed for iteration. Some features missed and were fixed from user feedback. Web, mobile APIs and backend on AWS, with CI/CD and Splunk monitoring.
+7. **Outcomes** — **VV-Life v1 closed loop delivered in 2019**, including the payment subsystem's transaction, management and reconciliation modules 📄[R22]; fewer critical incidents and lower cloud cost 📄[LIB] (no figures). The core model worked and users stayed ✅[CONF 2026-10-26] (qualitative — no retention figure).
 8. **Metrics** — 140-person team 📄 (direct vs total ❓ OQ-2.3) · "10M concurrent HTTP requests" ⛔ · "10M DAU" ⛔ until FU-1
 9. **Stakeholders** — CEO, product, business, engineering, DevOps and data teams.
-10. **Interview** — "Building an engineering organisation from scratch." · "Designing a payment subsystem with reconciliation."
+10. **Interview** — "Building an engineering organisation from scratch." · "Designing a payment subsystem with reconciliation." · "An underperformer you managed." → §13.
 11. **Relevance** — TPM ●● · SM ●●● · ATL ●●
 12. **Context note** — The team relocated to China; you stayed in Singapore for family reasons. [R22]
+13. **People-management example** ✅[CONF 2026-10-26] — a lead who ran several teams, including the big-data team, underperformed: gaps in planning and upward reporting, and personal emotion brought into the team. His teams blocked the project (business analysts waited months for technical support); people disengaged and some left. Wilson gave him the facts, agreed clear goals and a review period with real support; when the goals were not met, he let him go. The teams were moving again within weeks.
 
 | ID | Achievement | Source | Status | Safe resume wording |
 |---|---|---|---|---|
@@ -361,6 +375,8 @@ Background: operations reconciled eMemo and quotation documents by hand on a rec
 | PA-11.3 | CI/CD and standards | R22 + LIB | 📄 | Introduced CI/CD, code standards and containerised deployment with rollback on Kubernetes. |
 | PA-11.4 | Millisecond-level services | CONF 2026-10-16 | ✅ (no % figure) | Designed for performance with Spring Cloud microservices, Kafka-based asynchronous processing and caching that kept load off the database, bringing service response times to the millisecond level. |
 | PA-11.5 | Incident priority and emergency plans | CONF 2026-10-16 | ✅ | Defined production-incident priority levels and tiered emergency-response plans. |
+| PA-11.6 | 0-to-1 in small steps | CONF 2026-10-26 | ✅ | Delivered VV-Life from 0 to 1 as a small MVP grounded in the product and operations teams' market research, then iterated in small steps with every new feature behind a toggle that could be pulled back in minutes. |
+| PA-11.7 | Managing out an underperforming lead | CONF 2026-10-26 | ✅ | — (interview only; not a resume bullet) |
 
 ### PA-12 · VV Big-Data / Analytics Platform — ⚠️ stack conflict
 **Use only the [R22] version until CF-07 is answered:** led the big-data team and built the data-analysis platform from scratch (Flume, Hive, MapReduce, Spark Streaming, Spark SQL, YARN, ETL). 📄
@@ -450,14 +466,16 @@ Senior R&D Engineer (O1). Spring, Solr, Redis, MySQL, Nginx, Angular, shell. �
 ### X-01 · Security and Data-Migration Controls (formerly v1.0 A11) ✅
 Led API-call encryption/decryption, database encryption of sensitive data, dedicated credential-file management, and data migration at UOB (CBPR+ payments, C360 / retail lending), GBD and VV/AI Park. ✅[CONF] · TPM ●● SM ●● ATL ●●
 **Safe wording:** "Led API encryption, database encryption of sensitive data, credential management and data migration for payment, lending and customer-data platforms under MAS TRM, applying the same controls on earlier SaaS and consumer platforms."
+UOB hub detail: PA-01.9.
 
 ### X-02 · UOB Platform Leadership and Commercial Authority ✅
-- Lead 25 engineers, onshore + offshore, in two teams — payment-initiation hub (CEW, 15) and customer-centric database (CCD, 10) ✅[CONF 2026-10-16] — across two platform lines (cross-border payments, retail unsecured lending) serving millions of accounts ✅. Which team owns lending/collections: ❓ C6.
-- Leadership runs through squad leads and engineering managers, including dotted-line; covers 1:1s, mentoring and performance management. ✅ / 📄
+- Lead 25 engineers, onshore + offshore, in two teams — payment-initiation hub (CEW, 15) and customer-centric database (CCD, 10) ✅[CONF 2026-10-16] — across two platform lines (cross-border payments, retail unsecured lending) serving millions of accounts ✅. Which team owns lending/collections: ❓ C6. **The engineers come from the four IT service vendors under his governance (X-05)** ✅[CONF 2026-10-26].
+- Leadership runs through squad leads and engineering managers, including dotted-line; covers 1:1s, mentoring and performance management. ✅ / 📄 — Squad leads also come from the vendors ✅[CONF 2026-10-27]; the engineering managers are UOB permanent staff ✅[CONF 2026-10-27] and are not counted in the 25 ✅[CONF 2026-10-27]. For vendor staff, "performance management" means assessing each person's performance across the whole cycle — requirement development, project progress, delivery, go-live and incident handling ✅[CONF 2026-10-27].
 - 5+ years managing offshore teams. ✅
 - Decision or joint-decision authority on technology investment, vendor selection and SOW/licence negotiation; own the delivery budget. ✅
 - Work closely with teams in India, Thailand and Indonesia across time zones — collaboration, not line management ✅[CONF 2026-10-17]. No direct work with US-based teams (see fact-check D-09).
 - Prioritisation across the two platform lines: when their schedules conflict, agree MVP scope with the requirement, project and technical leads, confirm dependencies, then set a sequence all parties accept ✅[CONF 2026-10-16].
+- **Requirement conflict with offshore developers** ✅[CONF 2026-10-26]: offshore developers in India and Singapore business users clashed because requirements changed often and expectations were unclear. He introduced a requirement-clarification workshop before each sprint (BA, dev lead, QA, business users) to agree acceptance criteria and scope, plus a change-impact assessment for late changes. Escalations fell, trust improved and sprint delivery became more stable (qualitative). Platform and period: ❓ OQ-5.7.
 
 TPM ●●● SM ●●● ATL ●
 **Safe wording:**
@@ -465,6 +483,10 @@ TPM ●●● SM ●●● ATL ●
 - "Hold decision or joint-decision authority on technology investment, vendor selection and SOW/licence negotiation, and own the delivery budget."
 - "Work closely with teams in India, Thailand and Indonesia across time zones."
 - "When the two platform lines' schedules conflict, agree MVP scope with the requirement, project and technical leads, confirm dependencies and set a sequence all parties accept."
+- (variant, SB-12) "Lead 25 onshore and offshore engineers from four IT service vendors in two platform teams serving millions of accounts."
+- "Introduced pre-sprint requirement-clarification workshops (BA, dev lead, QA, business users) and change-impact assessment for late changes, reducing escalations between offshore developers and business users and stabilising sprint delivery."
+
+**Interview:** "Are they your direct reports? Did you hire them?" → the engineers and squad leads come from four IT service vendors; the engineering managers are UOB permanent staff; he leads the day-to-day work and governs the vendors (X-05). Never "hired". · "A conflict you resolved." → requirement-conflict example above. · "How do you manage the performance of vendor staff?" → each person is assessed across requirement development, progress, delivery, go-live and incident handling.
 
 ### X-04 · UOB Hands-On Technical Leadership ✅[CONF 2026-10-16]
 How the hands-on work actually splits — **not full-time coding**; everything outside delivery management is hands-on:
@@ -480,22 +502,26 @@ Scope of "~50 modules" (CEW only, or CEW + CCD): ❓ C6 · TPM ● SM ●● ATL
 - "Stay hands-on alongside delivery: review code daily across the platform's ~50 modules (deep review of ~20 core modules), co-design technical solutions with engineers, own the architecture, write core modules for significant changes, and resolve production issues."
 - **Do not** claim a coding-time percentage, or "full-time engineer".
 
-### PA-20 · Pureland Holding — Wealth / Quant Platform (selective) ⛔ until disclosure
-VWAP execution, portfolio and risk analytics on Spark/Hadoop; Spring services on AWS; S3 tick data; Bloomberg / Yahoo Finance data; a Claude agent producing risk-scored alerts; Python backtesting. [LIB] · Disclosure question OQ-1.8.
+### PA-20 · Pureland Holding — Wealth / Quant Platform — ⛔ RETIRED 2026-10-26 (D-16)
+**Removed from work history; the arrangement ended before Oct 2022. Kept for the record only.**
+VWAP execution, portfolio and risk analytics on Spark/Hadoop; Spring services on AWS; S3 tick data; Bloomberg / Yahoo Finance data; a Claude agent producing risk-scored alerts; Python backtesting. [LIB] · Disclosure question OQ-1.8 (closed 2026-10-26 → D-16).
 
 ### PA-21 · Personal Android Apps ❓
 CamelAcademy (Apache Camel learning game, Kotlin / Jetpack Compose) and "CAMEL 问答闯关" (multi-agent AI quiz on the Anthropic Messages API), both on Google Play. ✅[CONF] · Resume use ❓ (OQ-3.7). Useful mainly for ATL roles as evidence of current hands-on work.
 
 ### X-05 · UOB Vendor Governance ✅[CONF 2026-10-16]
-Chairs vendor governance for **four IT service vendors**: periodic budget reviews, year-end performance reviews and accountability meetings with vendor staff and teams. Complements X-02's commercial authority (vendor selection, SOW/licence negotiation). **Vendor names — including HCL — are never written externally** (01 §7). · TPM ●●● SM ●●● ATL ●
+Chairs vendor governance for **four IT service vendors**: periodic budget reviews, year-end performance reviews and accountability meetings with vendor staff and teams. Complements X-02's commercial authority (vendor selection, SOW/licence negotiation). **Vendor names — including HCL — are never written externally** (01 §7). The engineers he leads (X-02) come from these vendors ✅[CONF 2026-10-26]. · TPM ●●● SM ●●● ATL ●
 **Safe wording:** "Chair vendor governance for four IT service vendors — periodic budget reviews, year-end performance reviews and accountability meetings."
 **Interview:** "How do you hold a vendor accountable?" · "A vendor performance issue you resolved." (example ❓ — not on record)
 
 ### X-06 · UOB Production Incident Management and Regulatory-Reporting Input ✅[CONF 2026-10-16]
 Handles **P1–P3 incidents** within the bank's incident framework — escalation, stakeholder communication, RCA and post-incident documentation. Provides **technical incident analysis reports that feed the bank's regulatory reporting to MAS**; he does **not** draft the MAS submissions. His teams own production support (no separate SRE team). · TPM ●●● SM ●● ATL ●●
+**Sanitised P1 example** ✅[CONF 2026-10-19; listed as confirmed 2026-10-26] — a payment stuck in "pending in process". Splunk logs and payment records showed the hub had initiated it and sent it downstream, but the hub never received the response; the downstream team confirmed the payment had been processed — the response was blocked in the messaging channel back to the hub. **Containment:** the downstream team cleared the blocked messages and the affected payments recovered. **Permanent fix:** the messaging channel was optimised {— owner: his team or the channel team ❓ OQ-5.1}. No rollback was involved. Interview use only; no internal names or volumes.
+**Incident-command practice** ✅[CONF 2026-10-26]: one point of coordination in the first 15 minutes; a war-room channel; a hold-or-fail-over decision within 10 minutes; engineers assigned to logs and database, and to messaging and downstream; hourly syncs; first stakeholder update within 30 minutes, then hourly; DevOps or security pulled in if not resolved within an hour; blameless postmortem within 48 hours. These are practice targets, not measured results (§0A). "High-severity issues resolved within half a day": target or actual ❓ OQ-5.8.
 **Safe wording:** "Coordinate P1–P3 production incidents end to end within the bank's incident framework — escalation, stakeholder communication, RCA and post-incident reports — and produce technical incident analyses that support the bank's regulatory reporting to MAS."
+**Safe wording (optional, incident command):** "Run high-severity incidents with a set command routine — a single coordinator, a war room, a fail-over decision within minutes, regular stakeholder updates and a blameless postmortem within 48 hours."
 **Do not write:** "reported incidents to MAS", "MAS regulatory reporting owner".
-**Interview:** "Walk me through a P1." (specific incident — confidential details stay out; generic flow only)
+**Interview:** "Walk me through a P1." → the sanitised example above (confidential details stay out).
 
 ### X-03 · Crypto and Key-Management Infrastructure — knowledge only
 HSM, MPC/TSS, TEE, PKI, post-quantum migration awareness. **Not production.** Splice in only for digital-asset-custody JDs, with the qualifier kept. [CONF]
@@ -561,7 +587,7 @@ HSM, MPC/TSS, TEE, PKI, post-quantum migration awareness. **Not production.** Sp
 | H1 Hengshunyuan | PA-15 | |
 | P1–P7 AI Park | PA-16 (P1–P6), X-01 (P7) | "1,000+ lots" ⛔ HR-10 |
 | Earlier experience (Baidu, Sohu, Renren) | PA-17, PA-18, PA-19 | |
-| Selective: Pureland · Crypto | PA-20 · X-03 | |
+| Selective: Pureland · Crypto | PA-20 · X-03 | Pureland retired 2026-10-26 (D-16) |
 
 ### 5.4 Change log
 | Version | Date | Change |
@@ -569,6 +595,15 @@ HSM, MPC/TSS, TEE, PKI, post-quantum migration awareness. **Not production.** Sp
 | v4.0 (03) | 2026-10-16 | Renamed to `03_Achievement_Library.md`. Relevance codes renamed TDM→TPM, LSE→ATL (outside §5, which keeps historical wording). Metrics Bank moved in from profile v2.2 §7 as §0A (+6 rows). Added ⚠️ icon row; PA-01 settlement context + PA-01.7; PA-02 §4 no-SRE-team note + PA-02.3; PA-11.5; PA-16.5; X-05 vendor governance; X-06 incident management / regulatory-reporting input; inventory rows for X-05/X-06; §5.3 v1.0 coverage map. Header baseline/archive references corrected. Nothing removed. |
 | v4.1 | 2026-10-17 | TEKsystems back-fill (fact-updates/2026-10-17_TEKsystems-backfill, A1/A2/A4/A5/A6 approved): PA-18 publishing workflow + new PA-18.2 (O5); X-02 cross-time-zone collaboration (India, Thailand, Indonesia) and MVP prioritisation practice, with safe wording; PA-08 ownership O1 and Apr 2026; PA-07 go-live May 2026 after formal approval (C4 partly answered). Nothing removed. |
 | v4.2 | 2026-10-26 | New fact (fact-updates/2026-10-26_CRQ-CAB, A1 approved with edits): PA-03 §4 personal CRQ preparation and CAB presentation for every production release on both platform lines; §9 CAB added; §10 interview angle added; new PA-03.5 ✅[CONF 2026-10-26]. PA-01 §6 [LIB] "change control" unchanged. Nothing removed. |
+| v4.3 | 2026-10-26 | Interview Bank back-fill (fact-updates/2026-10-26_interview-bank-backfill; A1–A10, A12 approved): PA-01 §2 design for integrity and resilience, §3 MQ, §6 payment + entitlement data migration and coexistence reconciliation, §10, new PA-01.8 / PA-01.9; X-01 pointer; X-02 engineers come from the four vendors, performance-management scope ❓ OQ-5.5, requirement-conflict example, two safe-wording lines and interview answers; X-05 note; X-06 sanitised P1 example, incident-command practice and optional safe wording; §0A row 2 attribution + incident-command targets row; PA-07 §5 / §6 operating controls (four sub-points; four held under OQ-5.3) + PA-07.7; PA-11 §6, §7, §10, new §13 + PA-11.6 / PA-11.7; PA-20 retired (D-16) → new §5.5. Nothing removed. |
+| v4.4 | 2026-10-27 | OQ answers (fact-updates/2026-10-26_interview-bank-backfill, supplementary round R1, R2a): X-02 squad leads come from the vendors; vendor-staff performance-management scope defined, restriction on new resumes lifted, interview answer added; PA-07 §6 and PA-07.7 model endpoint = in-region on AWS over a private dedicated connection; held sub-points annotated. Nothing removed. |
+| v4.5 | 2026-10-27 | Direct reply 2026-10-27: X-02 engineering managers are UOB permanent staff (count in the 25 ❓ OQ-5.5), interview answer updated; PA-07 §6 network control reworded and confirmed (no public-internet access; only outbound path = private connection), rejection rate recorded as unmeasured observation (~zero, not for resume use); PA-07.7 adds "no public-internet access". Nothing removed. |
+| v4.6 | 2026-10-27 | OQ-5.5 and OQ-5.3 closed: §0A row 2 and X-02 — engineering managers not counted in the 25; PA-07 §5 / §6 — least-privilege and separation-of-duties framing, task-scoped time-limited permissions, URL allowlist (model endpoint only) with rate limiting, tool-call pre-checks recorded as not implemented, false-positive handling via one-squad pilot and prompt tuning; §10 two interview angles. Nothing removed. |
+
+### 5.5 Retired items — kept for the record
+| Item | Retired | Reason | Where the text is kept |
+|---|---|---|---|
+| PA-20 Pureland Holding (Jewelake) | 2026-10-26 | Removed from work history by decision D-16 (arrangement ended before Oct 2022) | Card kept in §4 |
 
 ## 6. Question Queue — one or two projects at a time
 

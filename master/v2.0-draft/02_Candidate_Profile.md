@@ -1,6 +1,6 @@
 # 02 — Candidate Profile
 
-**Version:** v3.1 · 2026-10-17 · **Status:** ACTIVE DRAFT — ⚠️ / ❓ rows await your decisions
+**Version:** v3.2 · 2026-10-26 · **Status:** ACTIVE DRAFT — ⚠️ / ❓ rows await your decisions
 **Role of this file:** Who Wilson is — identity, canonical timeline, titles, education, factual positioning, role families × industry lens, capability matrix and role scope summaries. Achievement wording and all metrics live in `03_Achievement_Library.md`.
 **Rules, icons and verbs:** `01_Resume_Master_Rules.md` (§3 icons, §4 tags/verbs). Never send this file to employers; never overwrite it with a tailored version.
 **Built from:** `master-career-profile.md` v2.2-DRAFT §0.1, §1–§6 (carried over verbatim except the surgical edits listed in §10) + decisions and confirmations of 2026-10-16.
@@ -35,6 +35,7 @@
 | Work status | **Singapore Permanent Resident (since 2024)** | ✅ [CONF 2026-10-15]. The 2022 resume's "Employment Pass" was correct at the time. |
 | Languages | English, Mandarin (professional working proficiency) | ✅ [LIB]. Supported by [CERT-BC] (2023 English course) |
 | Total experience | 18+ years (Jul 2008 – present) | ✅ Matches [R22] "15 years" as of 2022 |
+| Notice period | **One month** | ✅ [CONF 2026-10-26]. Supersedes earlier answers: "2 months, can reduce to 1" (Visa 2026-05, Cloudera 2026-07) and "about 2 weeks" (2026-10-23). Interview Bank SB-05 / SD-08 |
 
 ---
 
@@ -45,7 +46,7 @@
 | # | Period — proposed canonical | Period — other source | Employer | Title(s) | Location | Status |
 |---|---|---|---|---|---|---|
 | 1 | Oct 2022 – Present | — | United Overseas Bank (UOB), Group Technology & Operations | Vice President (VP2) / Technical Delivery Manager, Real-Time & Payment Data Services | Singapore | ✅ [LIB][CONF] |
-| 2 | May 2020 – Present (concurrent, part-time) | Not in [R22] | Pureland Holding (Jewelake) | Technical Consultant | — | ❓ Absent from the 2022 resume. Confirm dates, time commitment and UOB disclosure (OQ-1.8) |
+| 2 | May 2020 [LIB] – ended before Oct 2022 [CONF 2026-10-26] | Not in [R22] | Pureland Holding (Jewelake) | Technical Consultant | — | ⛔ **Removed from work history** [CONF 2026-10-26] (D-16). Not on resumes; kept for the record. Start month [LIB] only |
 | 3 | Nov 2020 – Jul 2022 | [R22]: "2020.11 – Now" (resume written in 2022) | Golden Bridge Drive (SG) Pte. Ltd. (GBD) | Project Manager & Architect | Singapore | ✅ Title and start date match. End date only in [LIB] |
 | 4 | Apr 2019 – Jun 2020 | [R22]: 2019.4 – 2020.6 | VV Technology Pte. Ltd. | **Head of Technical Development** [CONF] · "Head of Technical Centre" [R22][LIB] | Singapore | ✅ dates · ⚠️ title wording (FU-3) |
 | 5 | Oct 2017 – Sep 2019 [CONF] | [R22]: **Mar 2018 – Aug 2019** | Hengshunyuan Information Technology Co., Ltd. (own start-up) | **Co-founder** ✅ [CONF][R22] | China | ✅ title · ⚠️ dates (FU-5). Overlap with VV explained: the venture was largely dormant and VV was the primary role [CONF] |
@@ -67,7 +68,7 @@
                                     [AI Park 2016.4–2017.9]
                                                 [Hengshunyuan 2017.10–2019.9]
                                                              [VV 2019.4–2020.6]   ← primary role; Hengshunyuan largely dormant
-                                                                     [Pureland 2020.5 → present, part-time]
+                                                                     [Pureland 2020.5 → ended before 2022.10 — removed from work history, D-16]
                                                                        [GBD 2020.11–2022.7]
                                                                                     ░family░[UOB 2022.10 → present]
 ```
@@ -130,7 +131,8 @@ Renren      Sohu, Baidu            AI Park, Hengshunyuan, VV, GBD               
 **Projects:** PA-01 CBPR+/ISO 20022 migration · PA-02 payment resilience & observability · PA-03 delivery governance & quality engineering · PA-04 retail unsecured lending & collections · PA-05 C360 / SCV-CCD · PA-06 VN eTax · PA-07 AI Code Review Service · PA-08 eMemo/quotation AI validation · PA-09 AI-assisted delivery-risk forecasting (🔶)
 **Confidentiality:** "CEW" and "SCV-CCD" are internal names. External resumes use descriptive wording ("payment-initiation hub", "regional customer-360 platform").
 
-### 6.2 Pureland Holding (Jewelake) — Technical Consultant (concurrent) · May 2020 – Present · [LIB] ❓
+### 6.2 Pureland Holding (Jewelake) — ⛔ Removed from work history (D-16) · May 2020 – ended before Oct 2022
+**Decision [CONF 2026-10-26]:** the advisory arrangement ended before he joined UOB (Oct 2022); no outside work now. Not used in resumes or as current work. Text below kept for the record.
 Advisory work on a wealth/quant platform (VWAP execution, portfolio and risk analytics, Claude-agent trading-pattern alerts). **Selective module only.** Needs a disclosure plan before use in bank applications.
 
 ### 6.3 Golden Bridge Drive (SG) — Project Manager & Architect · Nov 2020 – Jul 2022 · [R22][LIB]
@@ -274,3 +276,4 @@ All earlier open items (FU-1 – FU-6, OQ-1.8 – 3.8, C1 – C7) remain in `fac
 | v2.2-DRAFT | 2026-10-16 | PA-Q1 answers: UOB team 25 (CEW 15 + CCD 10); CBPR+ milestones; personally coded modules; CCD live since 2022; Spring Batch and VV Kafka anchored. Detail in project-achievement-library v3.1. |
 | **v3.0 (02)** | 2026-10-16 | Renamed to `02_Candidate_Profile.md`. Kept v2.2 §0.1 and §1–§6 verbatim except: name row notes [TPL] "WILSON ZHANG"; Baidu = 2014 only (CF-12 resolved, [CONF]); [TPL] degree wording noted against FU-4; SRE training row added; standing-rule bullets pointed to 01; UOB summary points to §8; Baidu heading updated. Added §7 role families × lens with verbatim [LIB] headlines (CTO ones ⛔), §8 eight newly confirmed facts incl. MEPS+ defensibility note, §9 new questions. Moved §7/§8/§9/§0.2 out (see header). |
 | v3.1 | 2026-10-17 | §1 name row: FU-6 closed — "Wilson" only on resume headers [CONF 2026-10-17] (D-11). Nothing removed. |
+| v3.2 | 2026-10-26 | Interview Bank back-fill (fact-updates/2026-10-26_interview-bank-backfill): §1 new Notice period row — one month [CONF 2026-10-26] (A11, edited); Pureland removed from work history (D-16) — §2 row 2 dates and status, timeline line, §6.2 heading and decision line. Nothing removed. |
